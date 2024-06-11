@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <style> body{
+            background-image:url(https://i.postimg.cc/JhvSpcQR/photo1684603689-removebg-preview.png);
+            background-color: #FAF2F2;
+        }
+
+
+        header {
+                
+                background-color:#FED9CA ;
+                padding:10px ;
+                
+            }
+            header img{
+              text-align: left;
+            }
+            header P{
+              text-align:center;
+              font-size: 60px;
+              color:#7D5A5A ;
+            }
+            nav{
+
+              background-color:#C5C5C5;
+              padding:10px;
+            }
+            
+       
+        h1{
+            position: absolute;
+            top: 44%;
+            left: 38%;
+           text-align: center;
+           font-size: 250%;
+        }
+        h2{
+            position: absolute;
+            top: 53%;
+            left: 10%;
+            font-size: 170%;
+        }
+        
+        fieldset{
+            border: 2px solid;
+           padding: 10px;
+           border-radius: 10px;
+           width:min-content;
+           position:absolute;
+           top: 65%;
+           left: 23%;
+           background-color:#F1D1D1;
+        }
+           .info{
+            padding: 7px;
+            width: 50%;
+        }
+        input[type="text"],input[type="month"],input[name="dataname"]{
+         background-color: #FAF2F2;
+        }
+        button#back{
+          border-radius: 10px;
+          background-color: #a97979;
+          font-size:100%;
+          position: absolute;
+          top: 105%;
+          left:45%;
+          width: 8%;
+          height: 6%;
+        }
+        button#pay{
+          border-radius: 10px;
+          background-color: #a97979;
+          font-size:100%;
+          position: absolute;
+          top: 105%;
+          left:55%;
+          width: 8%;
+          height: 6%;
+        }
+
+        #paymentMethodMessage{
+          font-size: larger;
+          text-align: center;
+          position: absolute;
+          top: 90%;
+          left: 35%;
+        }
+        footer{
+      top: 112%;
+     }
+
+          
+        </style>
+      </head>
+        <body>
+
+      <title>Payment</title> 
+
+      <header id="header">
+       <img  width="300px" height="90px"src="https://i.postimg.cc/MKbSbbh8/photo1685106815.jpg" alt="H A N D CINEMA">
+       <p id="cinemaN"> H A N D CINEMA</p>
+      </header>
+        <nav></nav>
+        <h1> payment method </h1> 
+        <h2>Choose your payment method:</h2>
+
+      <form method = "post" action="show-data.php" enctype="multipart/form-data">
+
+       <div style="position:absolute; top: 65%; left:7% ;">
+        <img src="https://i.ibb.co/G238z2m/icons8-magnetic-card-48.png" alt="Debit Card">
+         <label for="debit">Debit Card</label>
+        <input type="radio" id="debit" name="payment" value="Debit Card">
+        </div>
+      
+        <div style="position:absolute; top: 75%; left:7% ;">
+        <img src="https://i.ibb.co/bJcZcDz/icons8-mastercard-logo-48.png" alt="Credit Card">
+         <label for="credit">Credit Card</label>
+        <input type="radio" id="credit" name="payment" value="Credit Card">
+        </div>
+    
+        <div style="position:absolute; top: 85%; left:7% ;">
+        <img src="https://i.ibb.co/hBDtYn6/icons8-apple-pay-50.png" alt="apple pay">
+         <label for="apple">Apple Pay</label>
+        <input type="radio" id="apple" name="payment" value="Apple Pay">
+        </div>
+   
+       <div style="position:absolute; top: 95%; left:7% ;">
+        <img src="https://i.ibb.co/G5ryN8V/icons8-paypal-48.png" alt="PayPal">
+         <label for="PayPal">PayPal</label>
+        <input type="radio" id="PayPal" name="payment" value="PayPal">
+       </div>
+       <p id="paymentMethodMessage"></p>
+      </form>
+
+      <form class="form">
+            <fieldset style="display: none;" id="card-info">
+                <legend>
+                <h3 class ="hdr-Card Information"> Card Information </h3>
+            </legend>
+                <div class="info">
+                <label>Card Number:</label>
+                <input type="text" required="required" placeholder="123 4567 8912 3456">
+                </div>
+
+                <div class="info">
+                <label>Name:</label>
+                <input name="dataname" required="required">
+               </div>
+
+               <div class="info">
+               <label>Expiration Date</label>
+                <input type="month" >
+               </div>
+               <div class="info">
+                <label>CVV Code</label>
+                <input type="text" placeholder="122" required="required">
+                </div>
+            </fieldset>
+      </form>
+
+      <button id="back" onclick="goback()">Back</button>
+      <button id="pay" style="display: none;" onclick="paymentSucceeded()">Pay Now</button>
+
+      <footer style="position: absolute;  bottom: 3%; left: 35%; "><p>Copyright © 2023 <abbr title="Have A Nice Day">HAND</abbr> Cinema.
+        All rights reserved.</p></footer>
+     </head>
+
+     <script>
+
+var CardForm = document.getElementById("card-info");
+var debitCardRadio = document.getElementById("debit");
+var creditCardRadio= document.getElementById("credit");
+var radioButtons = document.querySelectorAll('input[type="radio"]');
+var payButton = document.getElementById("pay");
+
+function showCardForm() {
+  if (debitCardRadio.checked || creditCardRadio.checked) {
+    CardForm.style.display = "block";
+  } else {
+    CardForm.style.display = "none";
+  }
+}
+
+debitCardRadio.addEventListener('change', showCardForm);
+creditCardRadio.addEventListener('change', showCardForm);
+
+for (var i = 0; i < radioButtons.length; i++) {
+  radioButtons[i].addEventListener('change', function() {
+    if (!debitCardRadio.checked && !creditCardRadio.checked) {
+      CardForm.style.display = "none";
+    }
+  });
+}
+
+
+for (var i = 0; i < radioButtons.length; i++) {
+        radioButtons[i].addEventListener('change', function() {
+          if (this.checked) {
+            payButton.style.display = "block";
+          } else {
+            payButton.style.display = "none";
+          }
+        });
+      }
+
+      var applePayRadio = document.querySelector('input[name="payment"][value="Apple Pay"]');
+      var payPalRadio = document.querySelector('input[name="payment"][value="PayPal"]');
+      var paymentMethodMessage = document.getElementById("paymentMethodMessage");
+
+      var RadioButtons = document.querySelectorAll('input[name="payment"]:not([value="Apple Pay"]):not([value="PayPal"])');
+      var paymentMethodMessage = document.getElementById("paymentMethodMessage");
+
+      function clearMessage() {
+      paymentMethodMessage.textContent = "";
+     }
+
+applePayRadio.addEventListener("change", function() {
+  if (applePayRadio.checked) {
+    paymentMethodMessage.textContent = "Are you sure you want to pay using Apple Pay? If yes, click on Pay Now.";
+  } else {
+    clearMessage();
+  }
+});
+
+payPalRadio.addEventListener("change", function() {
+  if(payPalRadio.checked) {
+    paymentMethodMessage.textContent = "Are you sure you want to pay using PayPal? If yes, click on Pay Now.";
+  } else {
+   clearMessage();
+  }
+});
+
+for (var i = 0; i < RadioButtons.length; i++) {
+  RadioButtons[i].addEventListener("change", clearMessage);
+}
+
+      function goback() {
+  window.location.href = "Tickets.html";
+}
+   var BackButton = document.getElementById("homeButton");
+   BackButton.addEventListener("click", goback);
+  
+   function paymentSucceeded() {
+  alert("Payment succeeded! have a nice day ^^.");
+}
+
+   
+      </script>
+   </body>
+</html>

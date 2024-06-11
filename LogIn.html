@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<title>LOG-IN Page</title>
+        <style>
+            header {
+                text-align: center;
+                background-color: #FED9CA;
+                padding: 50px;  
+            }
+
+            a {
+                color: #7D5A5A;
+            }
+              
+            section {
+                background-image: url(https://i.postimg.cc/JhvSpcQR/photo1684603689-removebg-preview.png);
+                padding: 125px;
+            }
+
+            h1 {
+                font-family: "Gill Sans";
+                font-size: 300%;
+                text-align: center;
+
+            }
+
+            fieldset {
+                margin: auto;
+                width: 500px;
+                text-align: center;
+                background-color: #C5C5C5;
+                padding: 10px;
+            }
+
+            input#Button{
+                background-color: #7D5A5A;
+            }
+
+            .footer {
+                font-family: "Gill Sans";
+                text-align: left;
+                font-size: 100%;
+            }
+        </style>
+        <script>
+        	function forgetPassword() {
+        		do {
+        		    var email=prompt("Please enter the email address registered in our systems below to receive a password reset link and a code:");
+                } while(!email);
+                alert("has been sent to email");
+        	}
+
+        	function singIn() {
+        		do{
+        			var ok = alert("Welcome Back!");
+        		} while(ok);
+        		location.href = "Home.html"; 
+        	}
+        </script>
+    </head>
+    <body>
+        <header>
+            <a target="_blank" href="Home.html"> <img  width="250px" height="80px" src="https://i.postimg.cc/MKbSbbh8/photo1685106815.jpg"></a>
+        </header>
+        <section>
+            <form method="post" action="show-log-in-data.php">
+                <legend>
+                <h1>Sign Into Your Account</h1>
+                </legend>
+                <fieldset>
+                    <input type="email" name="dataEmail" placeholder="Email Address" required="required" size="46">
+                    <br><br> 
+                    <input type="password" name="dataPassword" placeholder="Password" required="required" size="46" maxlength="8"> 
+                    <p>Forget your password? <input type="radio" name="data" id="yes" onclick="forgetPassword()"><label for="yes">Yes</label>
+                    <input type="radio" name="data" id="no" checked="checked"><label for="no">No</label></p> 
+                    <input type="button" id="Button" value="SING IN" onclick="singIn()"> 
+                    <p>Don’t have an account? <a href="SingUp.html">Sing up</a></p> 
+                </fieldset>
+            </form>
+            <footer><p class="footer">Copyright © 2023 <abbr title="Have A Nice Day">HAND</abbr> Cinemas. All rights reserved.</p></footer>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tickets Page</title>
+        <style>
+        header {
+                
+                  background-color:#FED9CA ;
+                  padding:10px ;
+                  
+              }
+              header img{
+                text-align: left;
+              }
+              header P{
+                text-align:center;
+                font-size: 60px;
+                color:#7D5A5A ;
+              }
+              nav{
+
+                background-color:#C5C5C5;
+                padding:10px;
+              }
+              
+               nav ul{
+
+                list-style: none;
+
+              }
+              nav li{
+                display:inline  ;
+                padding: 25px;
+              }
+
+              main{
+                background-image:url(https://i.postimg.cc/JhvSpcQR/photo1684603689-removebg-preview.png);
+                padding:70px ;
+              }
+              table{
+                text-align:left;
+                font-size:130%;
+                color:black ;
+                padding:100px;
+
+              }
+              table caption{
+                color:black;
+                font-size:300%;
+                text-align:left;
+              }
+              table td{
+                color: #bc6e1c;
+              }
+              table h2{
+                color: #16537e;
+              }
+              form{
+                
+                padding: 10px;
+                font-size: 15px;
+              }
+              select{
+
+                font-size: 15px;
+                color: #16537e;
+              }
+              input{
+                font-size: 15px;
+                color: #16537e;
+              }
+              button{
+                font-size: 15px;
+                color: #16537e;
+              }
+              table{
+                background-color:#dadada;
+              }
+
+              </style>
+
+              <script>
+
+              function buy() {
+                do{
+               var click = alert("Complete the payment process.");
+                }
+                while(click);
+               location.href = "Payment.html";
+              }
+
+            
+         </script>
+              
+    </head>
+
+    <body>
+
+        <header class="Top">
+            <img  width="300px" height="90px" class="1"src="https://i.postimg.cc/MKbSbbh8/photo1685106815.jpg" alt="H A N D CINEMA">
+            <p class="par">
+             H A N D CINEMA</p>
+        </header>
+
+
+        <nav>
+            <ul>
+                <a target="_self"href="Home.html"><li>Home page </li></a>
+                <a  target="_self" href="Movies.html"><li>Movise page </li></a>
+            </ul>
+        </nav>
+
+
+        <main>    
+
+            <table>
+                <caption>Tickets</caption>
+
+                <tr>
+
+                    <td > <h2>Now Playing</h2>
+                           <p>
+                           ZOOTOPIA<br>
+                           Coco<br>
+                           Dumbo<br>
+                           Cruella<br>
+                           Elemental<br>
+                           Frozen 2<br>
+                           Luca<br>
+                           Onward<br>
+                           Encanto 2<br>
+                           </p> 
+                     </td>
+
+                    <td> <h2>Ticket Prices</h2>
+
+                        <p>
+                        Matinee (before 5pm): 34SR<br>
+                        Evening (after 5pm): 45SR<br>
+                        3D Experience: 57SR<br>
+                        IMAX: 67SR<br>
+                        </p> 
+                    </td>
+                    <td rowspan="2">
+                         <img  width="500px" height="500" src="https://i.postimg.cc/T1X103KG/cinema-ticket-1799477-removebg-preview.png" alt="Tickets">
+                        <br>
+                    </td>
+                    
+                </tr>
+
+
+                <tr>
+                    <td>
+                    <h2>3D Experience:</h2>
+                      <p>
+                      <strong> Enhanced Visual Experience</strong><br>
+
+                      <strong>Depth and Realism</strong> <br>
+
+                      <strong>Engaging Storytelling</strong> <br>
+
+                      <strong>Family-Friendly</strong><br>
+                      </p>
+                      </td>
+
+
+                      <td>
+                    <h2>IMAX:</h2>
+                      <p>
+                      <strong> Large Screen Size</strong><br>
+
+                      <strong>LAdvanced Sound System</strong> <br>
+
+                      <strong>LEnhanced 3D Experience</strong> <br>
+
+                      <strong>LExclusive Content</strong><br>
+                      <strong>LUnique Environment</strong><br>
+                      </p>
+                      </td>
+
+                </tr>
+
+                <tr>
+                    
+                     <td colspan="2" scope="col">
+                        <form method="post">
+                <label for="movie">Select a movie:</label>
+
+                <select id="movie" name="movie">
+                    <option>ZOOTOPIA</option>
+                    <option>Coco</option>
+                    <option >Dumbo</option>
+                    <option >Cruella</option>
+                    <option >Elemental</option>
+                    <option >Frozen 2</option>
+                    <option >Luca</option>
+                    <option >Onward</option>
+                    <option >Encanto 2</option>
+                </select>
+
+                <label for="time">Select a time:</label>
+                <select id="time" name="time">
+                    <option value="matinee">Matinee (before 5pm)</option>
+                    <option value="evening">Evening (after 5pm)</option>
+                    <option value="3d">3D Experience</option>
+                    <option value="imax">IMAX</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="12" value="1">
+
+                <input type="button" value="Buy Tickets"onclick="buy()">
+            </form>
+                    </td>
+                </tr>
+            </table>
+            <footer><p>Copyright © 2023 Cinema Tickets.
+        All rights reserved.</p><br></footer>
+        </main>
+    </body>

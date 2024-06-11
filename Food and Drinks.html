@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Food & Drinks Page</title>
+    <style>
+      header {
+        background-color: #FED9CA;
+        padding: 10px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 80px;
+        color: #7D5A5A ;
+      }
+
+      nav {
+        background-color: #C5C5C5;
+        padding: 10px;
+      }
+
+      li {
+        display:inline;
+        padding: 25px;
+      }
+
+      main{
+        background-image:url(https://i.postimg.cc/JhvSpcQR/photo1684603689-removebg-preview.png);
+        padding:70px ;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .accordion {
+  			background-color: #7D5A5A;
+  			color: #F3E1E1;
+  			cursor: pointer;
+  			padding: 18px;
+  			width: 70%;
+  			border: none;
+  			text-align: left;
+  			outline: none;
+  			font-size: 23px;
+  			transition: 0.4s;
+			}
+
+			.active, .accordion:hover {
+  			background-color: #FAF2F2;
+  			color: darkgrey;
+			}
+
+			.accordion:after {
+  			content: '\002B';
+  			color: #777;
+  			font-weight: bold;
+  			float: right;
+  			margin-left: 5px;
+			}
+
+			.active:after {
+  			content: "\2212";
+			}
+
+			.panel {
+  			padding: 0 18px;
+  			background-color: white;
+  			max-height: 0;
+  			overflow: hidden;
+  			transition: max-height 0.2s ease-out;
+  			margin-bottom: 20px;
+			}
+
+			th, td {
+  			padding: 15px;
+  			text-align: left;
+  			border-bottom: 1px solid #ddd;
+			}
+
+			tr:hover {
+    		background-color: #FAF2F2;
+			}
+
+			#selectdiv{
+				padding: 50px;
+				background-color: #dee2e6;
+			}
+
+			#menupic{
+				margin-bottom: 50px;
+			}
+
+			.mySlides {display:none;}
+
+    </style>
+  </head>
+
+    <body>
+        <header>
+            <img width="300px" height="90px" src="https://i.postimg.cc/MKbSbbh8/photo1685106815.jpg">
+            <h1>H A N D CINEMAS</h1>
+        </header>
+        <nav>
+            <ul> <!-- links -->
+              <a target="_self" href="Home.html"><li>Home Page</li></a>
+              <a target="_self" href="Movies.html"><li>Movies Page</li></a>
+              <a target="_self" href="Food and Drinks.html"><li>Food & Drinks Page</li></a>
+              <a target="_self" href="Tickets.html"><li>Tickets Page</li></a>
+              <a target="_self" href="Payment.html"><li>Payment Page</li></a>
+            </ul>
+        </nav>
+        <main>
+        	<div class="slideShow" id="menupic">
+  					<img class="mySlides" src="https://i.ibb.co/0t89w4g/cheesepop.jpg" alt="cheesepop" >
+  					<img class="mySlides" src="https://i.ibb.co/9vmvYXv/hotdog.jpg" alt="hotdog" >
+  					<img class="mySlides" src="https://i.ibb.co/GCbcgRd/dynamitehotdog.jpg" alt="dynamitehotdog" >
+ 					 	<img class="mySlides" src="https://i.ibb.co/tC7mBkx/corndog.jpg" alt="corndog" >
+ 					 	<img class="mySlides" src="https://i.ibb.co/wsjw6wz/caramelpop.jpg" alt="caramelpop">
+ 					 	<img class="mySlides" src="https://i.ibb.co/5BJBb3X/icetea.jpg" alt="icetea">
+ 					 	<img class="mySlides" src="https://i.ibb.co/59LzdfS/saltpop.jpg" alt="saltpop">
+ 					 	<img class="mySlides" src="https://i.ibb.co/sPfszdV/softdrinks.png" alt="softdrinks">
+
+  <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+        <button class="accordion">Food Menu</button>
+<div class="panel">
+    <br>
+        <table>
+        <caption><b>HOTDOGS</b></caption>
+        <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Calories</th>
+        <th scope="col">Price</th>
+        </tr>
+        <tr>
+        <td>Mac & Cheese hotdogs</td>
+        <td>670 Kcal</td>
+        <td>25</td>
+        </tr>
+        <tr>
+        <td>Hotdog</td>
+        <td>510 Kcal</td>
+        <td>18</td>
+        </tr>
+        <tr>
+        <td>Dynamite hotdog</td>
+        <td>560 Kcal</td>
+        <td>21</td>
+        </tr>
+        <tr>
+        <td>Corn dog</td>
+        <td>490 Kcal</td>
+        <td>16</td>
+        </tr>
+        </table>
+
+        <br>
+        <br>
+
+        <table>
+        <caption><b>POPCORN</b></caption>
+        <tr>
+        <th scope="col">-</th>
+        <th scope="col">SMALL</th>
+        <th scope="col">MEDIUM</th>
+        <th scope="col">LARGE</th>
+        <th scope="col">Price</th>
+        </tr>
+        <tr>
+        <td>Salt</td>
+        <td>445 Kcal</td>
+        <td>742 Kcal</td>
+        <td>890 Kcal</td>
+        <td>15, 18, 20</td>
+        </tr>
+        <tr>
+        <td>Caramel</td>
+        <td>612 Kcal</td>
+        <td>1044 Kcal</td>
+        <td>1293 Kcal</td>
+        <td>18, 20, 22</td>
+        </tr>
+        <tr>
+        <td>Cheese</td>
+        <td>583 Kcal</td>
+        <td>1020 Kcal</td>
+        <td>1263 Kcal</td>
+        <td>17, 19, 21</td>
+        </tr>
+        </table>
+        </div>
+        <br>
+        <br>
+<button class="accordion">Drinks Menu</button>
+<div class="panel">
+    <br>
+        <table>
+        <caption><b>SHAKES</b></caption>
+        <tr>
+        <th scope="col">Cookies & Cream</th>
+        <th scope="col">Chocolate vanilla</th>
+        <th scope="col" colspan="2">Peanut butter</th>
+        <th scope="col">Price</th>
+        </tr>
+        <tr>
+        <td>1542 Kcal</td>
+        <td>1336 Kcal</td>
+        <td colspan="2">1553 Kcal</td>
+        <td>16, 14, 12</td>
+        </tr>
+        <tr>
+        <th scope="col">Nutella</th>
+        <th scope="col">Coffee</th>
+        <th scope="col">Strawberry</th>
+        <th scope="col">Caramel</th>
+        </tr>
+        <tr>
+        <td>1513 Kcal</td>
+        <td>1345 Kcal</td>
+        <td>1270 Kcal</td>
+        <td>1350 Kcal</td>
+        <td>15, 14, 12, 13</td>
+        </tr>
+        </table>
+
+        <br>
+        <br>
+
+
+        <table>
+        <caption><b>SOFT DRINKS</b></caption>
+        <tr>
+        <th scope="col">Small</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Large</th>
+        <th scope="col">Price</th>
+        </tr>
+        <tr>
+        <td>Pepsi</td>
+        <td>Diet pepsi</td>
+        <td>Mirinda</td>
+        <td rowspan="2">5, 8, 10</td>
+        </tr>
+        <tr>
+        <td>7up</td>
+        <td>Mt.Dew</td>
+        <td>Shani</td>
+        </tr>
+        </table>
+
+        <br>
+        <br>
+
+        <table>
+        <caption><b>SLUSH</b></caption>
+        <tr>
+        <th scope="col">Strawberry</th>
+        <th scope="col">Blueberry</th>
+        <th scope="col">Mango</th>
+        <th scope="col">Price</th>
+        </tr>
+        <tr>
+        <td>192 Kcal</td>
+        <td>192 Kcal</td>
+        <td>364 Kcal</td>
+        <td>12, 12, 12</td>
+        </tr>
+        </table>
+
+        <br>
+        <br>
+
+        <table>
+        <caption><b>ICE TEA</b></caption>
+        <tr>
+        <th scope="col" colspan="2">Flavors</th>
+        <th scope="col">Price</th>
+        </tr>
+        <tr>
+        <td>Lemon</td>
+        <td>Peach</td>
+        <td>9, 9</td>
+        </tr>
+        </table>
+</div>
+</main>
+<main>
+<div id="selectdiv" style="margin: 10px 10px 10px 10px">
+  <label for="hotdogflavor">Select Hotdog:</label>
+    <select id="hotdogflavor" name="Hotdogs">
+        <option value="mc">Mac&Cheese</option>
+        <option value="ht">hotdog</option>
+        <option value="dht">Dynamite hotdog</option>
+        <option value="cd">Corndog</option>
+        <option value="non">-</option>
+  </select>
+  <br>
+  <label for="popflavor">Select Popcorn:</label>
+    <select id="popflavor" name="popcorn">
+        <option value="Salt">Salt</option>
+        <option value="Caramel">Caramel</option>
+        <option value="Cheese">Cheese</option>
+        <option value="non">-</option>
+  </select>
+   <br>
+  <label for="shkflavor">Select Shakes:</label>
+    <select id="shkflavor" name="shakes">
+        <option value="cokcrm">Cookies&Cream</option>
+        <option value="chocov">Chocolate vanilla</option>
+        <option value="ptbut">Peanut butter</option>
+        <option value="nutella">Nutella</option>
+        <option value="cfe">Coffee</option>
+        <option value="srb">Strawberry</option>
+        <option value="crml">Caramel</option>
+        <option value="non">-</option>
+  </select>
+  <br>
+  <label for="sftflavor">Select Soft Drink:</label>
+    <select id="sftflavor" name="softdrinks">
+        <option value="pepsi">Pepsi</option>
+        <option value="dpepsi">Diet pepsi</option>
+        <option value="mrnda">Mirinda</option>
+        <option value="7up">7Up</option>
+        <option value="mtdew">Mt.Dew</option>
+        <option value="shani">Shani</option>
+        <option value="non">-</option>
+  </select>
+  <br>
+  <label for="slushflavor">Select Slush:</label>
+    <select id="slushflavor" name="slushes">
+        <option value="strb">Strawberry</option>
+        <option value="blb">Blueberry</option>
+        <option value="mng">Mango</option>
+        <option value="non">-</option>
+  </select>
+  <br>
+  <label for="iceteaflavor">Select Ice Tea:</label>
+    <select id="iceteaflavor" name="icetea">
+        <option value="Peach">Peach</option>
+        <option value="Lemon">Lemon</option>
+        <option value="non">-</option>
+  </select>
+  <br>
+  <label for="size">Select Size:</label>
+    <select id="size" name="size">
+        <option value="s">Small</option>
+        <option value="m">Medium</option>
+        <option value="l">Large</option>
+  </select>
+<br>
+<br>
+<br>
+<br>
+
+<input type="button" value="Buy Snacks" style="background-color: #F3E1E1;" onclick="buy()">
+</div>
+  </main>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+              function buy() {
+                do{
+               var click = alert("Complete the payment process.");
+                }
+                while(click);
+               location.href = "Payment.html";
+              }
+
+
+              var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+    </body>

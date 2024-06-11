@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+<!----------------------------------------------------------------------CSS--------------------------------------------------------------------------------->
+            <style> body{
+                background-image:url(https://i.postimg.cc/JhvSpcQR/photo1684603689-removebg-preview.png);
+                background-color: #F3E1E1;
+            }
+
+            header {
+                
+                background-color:#FED9CA ;
+                padding:5px ;
+                
+            }
+            header img{
+              text-align: left;
+            }
+            header P{
+              text-align:center;
+              font-size: 48px;
+              color:#7D5A5A ;
+            }
+
+            h1{
+            position: absolute;
+            top: 60%;
+            left: 27%;
+           text-align: center;
+           font-size: 250%;
+           -webkit-text-fill-color: #7D5A5A;
+        }
+
+        #coming-soon{
+            position: absolute;
+            font-size: 250%;
+            top: 60%;
+            left: 55%;
+           -webkit-text-fill-color: #7D5A5A;
+        }
+            nav{
+
+              background-color:#C5C5C5;
+              padding:10px;
+            }
+            
+            nav ul{
+            list-style: none;
+
+             }
+             nav li{
+             display:inline  ;
+             padding: 25px;
+             cursor: pointer;
+            }
+
+            #description,#contactInfo{
+                font-size: larger;
+                font-weight: 600;
+                -webkit-text-fill-color: #7D5A5A;
+                padding: 15px;
+            }
+
+         .container {
+         position: absolute;
+         width: 80%;
+         margin: 0 ;
+         top: 70%;
+         left: 6%;
+          }
+
+        table {
+       width: 60%;
+       border-width: 3px;
+      position:absolute;
+      top: 40%;
+      left: 22%;
+      }
+
+     #prev {
+      position: absolute;
+      transform: translateY(-50%);
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 20px;
+      left: 21%;
+      top: 80%;
+     }
+
+     #next {
+     position: absolute;
+      transform: translateY(-50%);
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 20px;
+      right: 53%;
+      top: 80%;
+     }
+
+     .container-soon {
+         position: absolute;
+         width: 80%;
+         margin: 0 ;
+         top: 70%;
+         left: 17%;
+          }
+
+   #PB2{
+      position: absolute;
+      transform: translateY(-50%);
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 20px;
+      left: 51%;
+      top: 80%;
+     }
+
+    #NB2{
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 20px;
+    right: 23%;
+    top: 80%;
+     }
+
+
+    #soon{
+       width: 60%;
+       border-width: 3px;
+      position:absolute;
+      top: 60%;
+      left: 45%;
+     }
+     footer{
+      top: 120%;
+     }
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #FAF2F2;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+  }
+
+  .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #7D5A5A;
+      display: block;
+      transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+      color: darkslategrey;
+  }
+
+  .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+  }
+
+  figure{
+    margin-left: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+       </style>
+     }
+     </head>
+ <!-----------------------------------------------------HTML----------------------------------------------------------------------------------------------->
+        <body>
+       <title>HAND</title> 
+       <header id="header">
+       <img  width="300px" height="90px"src="https://i.postimg.cc/MKbSbbh8/photo1685106815.jpg" alt="H A N D CINEMA">
+       <p id="cinemaN"> H A N D CINEMA</p>
+      </header>
+      <div id="profileSidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <figure>
+        <img src="https://i.ibb.co/RvKVH9K/user-icon.png"id="user"/>
+        <figcaption style="font-size: 24px">Welcome</figcaption>
+        </figure>
+        <a href="Update information.html"><img src="https://i.ibb.co/VmrXqgg/update-icon.png" id="upd" />Update information</a>
+        <a href="Purchase.html"><img src="https://i.ibb.co/FXcrJhp/purchases-icon.png" id="pur" />Purchases</a>
+        <a href="LogIn.html"><img src="https://i.ibb.co/vcRJwKz/logout-icon.png" id="log" />Log out</a>
+      </div>
+        <nav>
+            <ul>
+               <li id="about">About us</li>
+              <li id="contact">Contact us</li>
+              <li style="cursor:pointer" onclick="openNav()">profile</li>
+              <a target="_self" href="Movies.html"><li>Movies</li></a>
+              <a target="_self" href="Tickets.html"><li>Tickets</li></a>
+              <a target="_self" href="WaysToWatch.html"><li>Ways To Watch</li></a>
+              <a target="_self" href="Food and Drinks.html"><li>Foods and Drinks</li></a>
+              <a target="_self" href="SingUp.html"><li>Create Account</li></a>
+              </ul>
+        </nav>
+
+         <div id="description" style="display:none;">
+           Hand website is a cinema website that help visitors to buy movie tickets as well as thier desirde food and drink to enjoy with the movie.<br>
+           Our website Name means "Have A Nice Day" and that is our sincere wish to our websits visitors ^^.
+          </div>
+
+          <div id="contactInfo" style="display: none;">
+           Please feel free to contact us on our email if you have any problem<br> HANDservice@gmail.com
+          </div>
+
+
+            <h1>What's on </h1>
+            <div class="container">
+            <table id="on">
+               <tr>
+                  <td><img width="300px" height="350" src="https://lumiere-a.akamaihd.net/v1/images/image_7ff71125.jpeg?region=0%2C0%2C540%2C810&width=320"></td>
+                  <td><img width="300px" height="350" src="https://lumiere-a.akamaihd.net/v1/images/image_bf2c13ad.jpeg?region=0%2C0%2C540%2C810&width=320"></td>
+                  <td><img width="300px" height="350" src="https://lumiere-a.akamaihd.net/v1/images/image_d287bac4.jpeg?region=0%2C0%2C540%2C810&width=320"></td>
+                  <td><img width="300px" height="350" src="https://media.gemini.media/img/Original/2020/4/22/2020_4_22_17_3_17_486.jpg" alt="ZOOTOPIA"></td>
+                </tr>
+              </table>
+            </div>
+              <div>
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+              </div>
+            
+
+            <h1 id="coming-soon">Coming soon</h1>
+            <div class="container-soon">
+             <table id="soon">
+                <tr>
+                  <td><img id="second" width="300px" height="350" src="https://i.ibb.co/4MjqtbK/conan26-movie-poster.jpg"></td>
+                  <td><img id="second" width="300px" height="350" src="https://i.ibb.co/VQrmfRk/suzume-poster.jpg"></td>
+                  <td><img id="second" width="300px" height="350" src="https://i.ibb.co/DLqKwZF/little-mermaid-poster.jpg"></td>
+                </tr>
+              </table>
+              </div>
+              <div> <button id="PB2">&lt;</button>
+                    <button id="NB2">&gt;</button>
+              </div>
+        
+              
+              <footer style="position: absolute;  bottom: -80px; left: 35%; "><p>Copyright © 2023 HAND Cinema.
+                All rights reserved.</p></footer>
+        
+        </head>
+ <!-------------------------------------------------------------------JAVASCRIPT---------------------------------------------------------------------------------------->        
+        <script>
+        var aboutListItem = document.getElementById("about");
+        var descriptionDiv = document.getElementById("description");
+
+     aboutListItem.addEventListener("click", () => {
+     if (descriptionDiv.style.display === "none") {
+     descriptionDiv.style.display = "block";
+    } 
+     else {
+    descriptionDiv.style.display = "none";
+    }
+    }); 
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+    var contactItem = document.getElementById("contact");
+    var contactInfo = document.getElementById("contactInfo");
+    contactItem.addEventListener("click",()=>{
+        if(contactInfo.style.display === "none"){
+            contactInfo.style.display = "block";
+        }
+        else{
+        contactInfo.style.display ="none";
+        }
+    });
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+var images = document.getElementById("on").getElementsByTagName("td");
+let currentImage = 1;
+
+function showImage() {
+  for (let i = 0; i < images.length; i++) {
+    images[i].style.display = "none";
+  }
+  images[currentImage].style.display = "block";
+}
+
+function nextImage() {
+  currentImage = (currentImage + 1) % images.length;
+  showImage();
+}
+
+function prevImage() {
+  currentImage = (currentImage + images.length - 1) % images.length;
+  showImage();
+}
+
+showImage();
+document.getElementById("next").addEventListener("click", nextImage);
+document.getElementById("prev").addEventListener("click", prevImage);
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+var imagesSoon = document.getElementById("soon").getElementsByTagName("td");
+let currentImageSoon = 1;
+
+function showImageSoon() {
+  for (let i = 0; i < imagesSoon.length; i++) {
+    imagesSoon[i].style.display = "none";
+  }
+  imagesSoon[currentImageSoon].style.display = "block";
+}
+
+function nextImageSoon() {
+  currentImageSoon = (currentImageSoon + 1) % imagesSoon.length;
+  showImageSoon();
+}
+
+function prevImageSoon() {
+  currentImageSoon = (currentImageSoon + imagesSoon.length - 1) % imagesSoon.length;
+  showImageSoon();
+}
+
+showImageSoon();
+document.getElementById("NB2").addEventListener("click", nextImageSoon);
+document.getElementById("PB2").addEventListener("click", prevImageSoon);
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+function openNav() {
+  document.getElementById("profileSidenav").style.width = "250px";
+  
+}
+
+function closeNav() {
+  document.getElementById("profileSidenav").style.width = "0";
+  
+}
+  </script>
+ </body>
+</html>

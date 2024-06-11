@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Update information Page</title>
+        <style>
+            header {
+                text-align: center;
+                background-color: #FED9CA;
+                padding: 50px;  
+            }
+
+            section {
+                background-image: url(https://i.postimg.cc/JhvSpcQR/photo1684603689-removebg-preview.png);
+                padding: 130px;
+            }
+
+            h1 {
+                font-family: "Gill Sans";
+                font-size: 200%;
+                text-align: center;
+            }
+
+            fieldset {
+                margin: auto;
+                width: 500px;
+                text-align: center;
+                background-color: #C5C5C5;
+                padding: 10px;
+            }
+        </style>
+        <script>
+            function updateAccount() {
+                do{
+                    var ok = alert("Your information was updated successfully");
+                } while(ok);
+                location.href = "Home.html"; /* link to home page */
+            }
+        </script>
+    </head>
+    <body>
+    	  <header>
+          <a href="LogIn.html"> <img  width="250px" height="80px" src="https://i.postimg.cc/MKbSbbh8/photo1685106815.jpg"></a> <!-- link to home page -->
+        </header>
+        <section>
+            <form method="post" action="show-update-data.php">
+                <legend>
+                <h1>Update your profile information</h1>
+                </legend>
+                <fieldset>
+                    <input type="radio" name="data" id="mr"><label for="mr">Mr</label>
+                    <input type="radio" name="data" id="mrs"><label for="mrs">Mrs</label>
+                    <input type="radio" name="data" id="miss-ms"><label for="miss-ms">Miss/Ms</label>
+                    <br><br>
+                    <input type="text" name="dataFirst" placeholder="First Name" required="required">
+                    <input type="text" name="dataLast" placeholder="Last Name" required="required">
+                    <br><br>
+                    <input type="email" name="dataEmail" placeholder="Email Address" required="required" size="46">
+                    <br><br> 
+                    <select name="dataCountry_code"> 
+                        <option value="dataSaudi" selected="selected">+966 (Saudi Arabia)</option>
+                        <option value="dataEmirate">+971 (United Arab Emirates)</option>
+                        <option value="dataKuwait">+965 (Kuwait)</option>
+                    </select>
+                    <input type="tel" name="dataTelephone" placeholder="i.e.545492569" required="required" size="17">
+                    <br><br>
+                    <label for="date-ofBirth">Date of Birth: </label>
+                    <input type="date" name="datadate" id="date-ofBirth" placeholder="Date of Birth" required="required">
+                    <br><br>
+                    <input type="button" value="Update" onclick="updateAccount()"> 
+                </fieldset>
+            </form>
+        </section>
+    </body>
+</html>

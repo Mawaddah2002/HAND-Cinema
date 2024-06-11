@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<title>SING-UP Page</title>
+        <style>
+            header {
+                text-align: center;
+                background-color: #FED9CA;
+                padding: 50px;  
+            }
+
+            a {
+                color: #7D5A5A;
+            }
+
+            section {
+                background-image: url(https://i.postimg.cc/JhvSpcQR/photo1684603689-removebg-preview.png);
+                padding: 70px;
+            }
+
+            h1 {
+                font-family: "Gill Sans";
+                font-size: 300%;
+                text-align: center;
+            }
+
+            fieldset {
+                margin: auto;
+                width: 500px;
+                text-align: center;
+                background-color: #C5C5C5;
+                padding: 10px;
+            }
+
+            input#Button{
+                background-color: #7D5A5A;
+            }
+
+            .footer {
+                font-family: "Gill Sans";
+                text-align: left;
+                font-size: 100%;
+            }
+        </style>
+        <script>
+            function createAccount() {
+                do{
+                    var ok = alert("Welcome to HAND Cinemas!");
+                } while(ok);
+                location.href = "Home.html"; 
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <a target="_blank" href="Home.html"> <img  width="250px" height="80px" src="https://i.postimg.cc/MKbSbbh8/photo1685106815.jpg"></a> 
+        </header>
+        <section>
+            <form method="post" action="show-sign-up-data.php">
+                <legend>
+                <h1>Create Your Account</h1>
+                </legend>
+                <fieldset>
+                    <input type="radio" name="data" id="mr"><label for="mr">Mr</label>
+                    <input type="radio" name="data" id="mrs"><label for="mrs">Mrs</label>
+                    <input type="radio" name="data" id="miss-ms"><label for="miss-ms">Miss/Ms</label>
+                    <br><br>
+                    <input type="text" name="dataFirst" placeholder="First Name" required="required">
+                    <input type="text" name="dataLast" placeholder="Last Name" required="required">
+                    <br><br>
+                    <input type="email" name="dataEmail" placeholder="Email Address" required="required" size="46">
+                    <br><br> 
+                    <select name="dataCountry_code"> 
+                        <option value="dataSaudi" selected="selected">+966 (Saudi Arabia)</option>
+                        <option value="dataEmirate">+971 (United Arab Emirates)</option>
+                        <option value="dataKuwait">+965 (Kuwait)</option>
+                    </select>
+                    <input type="tel" name="dataTelephone" placeholder="i.e.545492569" required="required" size="17">
+                    <br><br>
+                    <label for="date-ofBirth">Date of Birth: </label>
+                    <input type="date" name="datadate" id="date-ofBirth" placeholder="Date of Birth" required="required">
+                    <br><br>
+                    <input type="password" name="dataPassword" placeholder="Password" required="required" size="46" maxlength="8"> 
+                    <p><small>Must have a minimum of 8 characters containing at least<br>one uppercase (A-Z), one lowercase (a-z) and a number (0-9).</small></p>
+                    <input type="checkbox" name="dataConfirm" id="confirm" required="required"><label for="confirm">Confirm that you have read and agreed to our<br>Privacy Policy and Terms & Conditions.</label>
+                    <br><br>
+                    <input type="button" id="Button" value="CREATE ACCOUNT" onclick="createAccount()"> 
+                    <p>Already have an account? <a href="LogIn.html">Sing in</a></p>
+                </fieldset>
+            </form>
+            <footer><p>Copyright © 2023 <abbr title="Have A Nice Day">HAND</abbr> Cinemas. All rights reserved.</p><br></footer>
+        </section>
+    </body>
+</html>

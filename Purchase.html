@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Purchases Page</title>
+        <style>
+            header {
+                text-align: center;
+                background-color: #FED9CA;
+                padding: 50px;  
+            }
+
+            section {
+                background-image: url(https://i.postimg.cc/JhvSpcQR/photo1684603689-removebg-preview.png);
+                padding: 155px;
+            }
+
+            div{
+                background-color: #dee2e6;
+                padding: 10px;
+            }
+            button{
+                background-color: #F3E1E1;
+            }
+
+        </style>
+        <script>
+            function currentClick(){
+                document.getElementById("current").innerHTML = "There is not new purchases";
+                document.getElementById("past").innerHTML = "";
+            }
+
+            function pastClick(){
+                document.getElementById("past").innerHTML = "There is not past purchases";
+                document.getElementById("current").innerHTML = "";
+            }
+            
+            function backClick() {
+                location.href = "Home.html"; /* link to home page */
+            }
+        </script>
+    </head>
+    <body>
+    	  <header>
+           <img  width="250px" height="80px" src="https://i.postimg.cc/MKbSbbh8/photo1685106815.jpg">
+        </header>
+        <section>
+
+<div>
+  <button style="padding: 8px 8px; font-size: 20px;" onclick="currentClick()">Current</button>
+  <button style="padding: 8px 8px; font-size: 20px;" onclick="pastClick()">Past</button>
+  <br>
+  <br>
+
+  <p id="current" style="font-size: 22px;">There is not new purchases</p>
+
+  <p id="past" style="font-size: 22px;"></p> 
+  <br>
+  <br>
+  <br>
+  <br>
+
+ <button style="padding: 4px 4px; font-size: 16px;" onclick="backClick()">Back</button>
+ </div>
+        </section>
+    </body>
+</html>
